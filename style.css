@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --hue: 195;
+    --color-base-white: hsl(0, 0%, 100%);
+    --color-base-darkblue: hsl(var(--hue), 91%, 25%);
+    --color-base-lightblue: hsl(var(--hue), 46%, 40%);
+    --color-base-gray-300: hsl(var(--hue), 6%, 8%);
+    --color-base-gray-900: hsl(var(--hue), 6%, 13%);
+    --color-base-gray-500: hsl(0, 0%, 24%);
+}
+
+html, body, input {
+    font-family: "Mulish", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--color-base-darkblue);
+    color: var(--color-base-gray-900);
+}
+
+#app {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    height: 100vh;
+}
+
+.container, .container02, sidebar {
+    width: min(43rem, 100%);
+    margin: 0 auto;
+}
+
+.container02 h1, sidebar h1{
+    margin-top: 3rem;
+    font-size: 2.4rem;
+    padding: 0 2.2rem;
+    font-weight: 700;
+}
+
+.container02 p {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 0 2.2rem;
+    line-height: 160%;
+}
+
+.reaction {
+    display: flex;
+    height: 4rem;
+    width: 4rem;
+    gap: 1.2rem;
+    margin-top: .8rem;
+    padding: 0 2.2rem;
+}
+
+.button {
+    color: var(--color-base-darkblue);
+}
+
+.button:hover{
+    filter: contrast(101%) saturate(200%);
+    transform: scale(1.1);
+}
+
+#article{
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    transition: all 200ms ease-out;
+    display: inline-block;
+}
+
+main {
+    overflow-y: scroll;
+    background-color: var(--color-base-white);
+}
+
+header {
+    padding: 1.5rem 2.8rem;
+}
+
+header, nav {
+    display: flex;
+    align-items: center;
+    gap: 2.6rem;
+}
+
+header form {
+    flex: 1;
+}
+
+.input-wrapper {
+    height: 4rem;
+}
+
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-wrapper input{
+    width: 100%;
+    padding: 1.2rem;
+    border: 0;
+    border-radius: .4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background-color: var(--color-base-lightblue);
+}
+
+.input-wrapper input::placeholder{
+    color: var(--color-base-white);
+}
+
+.avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo {
+    width: 4rem;
+    height: 4rem;
+}
+
+/* Galeria */
+
+.item {
+    background-color: var(--color-base-white);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 1.6rem;
+    align-items: center;
+    padding: 0 2.2rem;
+    margin-top: 3.2rem;
+}
+
+.item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    transition: all 200ms ease-out;
+    border-radius: .5rem;
+}
+
+.item img:hover {
+    filter: hue-rotate(5deg) contrast(120%) saturate(200%);
+    transform: scale(1.1);
+}
+
+.gallery {
+    margin-bottom: 4rem;
+}
+
+.details {
+    background-color: var(--color-base-white);
+    z-index: 1;
+    position: relative;
+}
+
+.details h2 {
+    font-size: 1.8rem;
+}
+
+.description {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    line-height: 160%;
+}
+
+.description span{
+    background-color: var(--color-base-gray-100);
+    line-height: 1.6rem;
+    font-size: 1.4rem;
+}
+
+footer h3{
+    text-align: center;
+    color: var(--color-base-white);
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+/* Animações */
+
+header {
+    --startY: -100%;
+    animation: move .2s;
+}
+
+footer {
+    --startY: 100%;
+    animation: move .2s;
+    padding: 2.2rem;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(var(--startY));
+    }
+}
+
+.item, #article{
+    --delay: .4s;
+    animation: appear .4s var(--delay) backwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1000px) {
+
+    .container{
+        width: min(122rem);
+    }
+
+    .container02 {
+        width: min(80rem);
+        padding: 0;
+    }
+
+    sidebar {
+        width: min(38.5rem);
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 4.4rem 12rem;
+        gap: 3.4rem;
+    }
+
+    .title{
+        display: flex;
+        padding: 0;
+        gap: 36.5rem;
+        align-items: center;
+        margin-top: 3rem;
+    }
+
+    sidebar h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container02 h1 {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container02 p, .reaction, .item {
+        padding: 0;
+    }
+
+}
