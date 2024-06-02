@@ -14,101 +14,100 @@
 </head>
 <body>
     <div id="app">
-        <header class="container">
-            <nav>
-                <img class="logo" src="./assets/logo.svg" alt="Logomarca do Blod de Gatos, círculo com uma pata de gato no meio">
-            </nav>
-
-            <form action="#">
-                <div class="input-wrapper">
-                    <label for="search">Pesquise por artigos</label>
-                    <input id="search" type="text" placeholder="Pesquise por artigos">
-                </div>
-            </form>
-
-            <img class="avatar" src="https://randomuser.me/api/portraits/men/69.jpg" alt="Imagem de um homem">
+        <header>
+            <div class="container">
+                <a href="#" title="Clique para a pagina inicial">
+                    <img class="logo" src="./assets/logo.svg" alt="Logomarca do Blod de Gatos, círculo com uma pata de gato no meio">
+                </a>
+    
+                <form action="#">
+                    <div class="input-wrapper">
+                        <label for="search">Pesquise por artigos</label>
+                        <input id="search" type="text" placeholder="Pesquise por artigos">
+                    </div>
+                </form>
+    
+                <img class="avatar" src="https://randomuser.me/api/portraits/men/69.jpg" alt="Imagem de um homem">
+            </div>
         </header>
 
         <main>
-            <div class="container02">
-                <img id="article" src="https://source.unsplash.com/random?cat=1" alt="Imagem de um gato">
-
-                <div class="title">
-                    <h1 >Seriam os gatos astronautas?</h1>
-                    
-                    <div class="reaction">
-                        <img class="button" src="./assets/like.svg" alt="Botão para curtir a publicação">
-                        <img class="button" src="./assets/dislike.svg" alt="Botão para descurtir a publicação">
-                    </div>
-                </div>
-
-                <p>
-                    Os gatos são animais fascinantes e cercados de mistérios. De temperamento independente e misterioso, esses felinos são conhecidos por sua agilidade, elegância e um comportamento muitas vezes imprevisível. Contudo, recentemente, uma teoria tem ganhado espaço na internet e entre teóricos de conspiração: seriam os gatos astronautas? <br>
-                    A teoria sugere que os gatos não são animais terrestres, mas sim seres extraterrestres enviados para realizar uma missão específica em nosso planeta. Há relatos históricos que apontam para o fato de que os gatos eram considerados seres sagrados em diferentes culturas e até mesmo associados a figuras divinas. Isso poderia indicar que os gatos têm uma origem muito mais mística do que se pensava anteriormente.<br><br>
-                    Além disso, há teóricos que acreditam que os felinos possuem habilidades telepáticas e são capazes de se comunicar com outras espécies alienígenas. Essa crença baseia-se em relatos de pessoas que afirmam terem visto gatos reagindo a estímulos que não são perceptíveis aos seres humanos, ou até mesmo se comportando de maneira incomum durante eventos astronômicos, como uma aurora boreal. Esses e outros indícios foram interpretados como sinais de que os gatos seriam seres interplanetários.
-                </p>
+            <img class="primary-img" src="https://source.unsplash.com/random?cat=1" alt="Imagem de um gato">
+            <h1 >Seriam os gatos astronautas?</h1>
+            <div class="buttons">
+                <button>
+                    <img src="./assets/like.svg" alt="Botão para curtir a publicação">
+                </button>
+                <button>
+                    <img src="./assets/dislike.svg" alt="Botão para descurtir a publicação">
+                </button>
             </div>
-
-            <div class="container03">
-                    <h1>Artigos relacionados</h1>
-    
-                    <section class="gallery">
-                        <figure class="item" style="--delay: .4s">
-                            <img src="https://source.unsplash.com/random?cat=2" alt="Imagem de um gato">
-                            <figcaption class="details">
-                                <h2>Sábado preguiçoso</h2>
-                                <div class="description">
-                                    <span>Descubra atividades interessantes para fazer com seu pet durante os finais de semana.</span>
-                                </div>
-                            </figcaption>
-                        </figure>
-    
-                        <figure class="item" style="--delay: .6s">
-                            <img src="https://source.unsplash.com/random?cat=3" alt="Imagem de um gato">
-                            <figcaption class="details">
-                                <h2>Balaio de gatos</h2>
-                                <div class="description">
-                                    <span>Como evitar confusões entre seus gatíneos e acostumá-los desde filhotes.</span>
-                                </div>
-                            </figcaption>
-                        </figure>
-    
-                        <figure class="item" style="--delay: .8s">
-                            <img src="https://source.unsplash.com/random?cat=4" alt="Imagem de um gato">
-                            <figcaption class="details">
-                                <h2>Cartela de cores</h2>
-                                <div class="description">
-                                    <span>Seu gato é inverno intenso? Verão profundo? Descubra as cores que mais combinam com seu bichano.</span>
-                                </div>
-                            </figcaption>
-                        </figure>
-    
-                        <figure class="item" style="--delay: 1s">
-                            <img src="https://source.unsplash.com/random?cat=5" alt="Imagem de um gato">
-                            <figcaption class="details">
-                                <h2>Os gatos sentem frio?</h2>
-                                <div class="description">
-                                    <span>Preparem-se para a frente fria que vem para o país da melhor maneira possível.</span>
-                                </div>
-                            </figcaption>
-                        </figure>
-    
-                        <figure class="item" style="--delay: 1.2s">
-                            <img src="https://source.unsplash.com/random?cat=6" alt="Imagem de um gato">
-                            <figcaption class="details">
-                                <h2>Conheça o Moacir</h2>
-                                <div class="description">
-                                    <span>Moacir é o gatinho da semana do nosso blog. Venha conhecer sua história de superação.</span>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </section>
-            </div>
+            <p>
+                Os gatos são animais fascinantes e cercados de mistérios. De temperamento independente e misterioso, esses felinos são conhecidos por sua agilidade, elegância e um comportamento muitas vezes imprevisível. Contudo, recentemente, uma teoria tem ganhado espaço na internet e entre teóricos de conspiração: seriam os gatos astronautas? <br>
+                A teoria sugere que os gatos não são animais terrestres, mas sim seres extraterrestres enviados para realizar uma missão específica em nosso planeta. Há relatos históricos que apontam para o fato de que os gatos eram considerados seres sagrados em diferentes culturas e até mesmo associados a figuras divinas. Isso poderia indicar que os gatos têm uma origem muito mais mística do que se pensava anteriormente.<br><br>
+                Além disso, há teóricos que acreditam que os felinos possuem habilidades telepáticas e são capazes de se comunicar com outras espécies alienígenas. Essa crença baseia-se em relatos de pessoas que afirmam terem visto gatos reagindo a estímulos que não são perceptíveis aos seres humanos, ou até mesmo se comportando de maneira incomum durante eventos astronômicos, como uma aurora boreal. Esses e outros indícios foram interpretados como sinais de que os gatos seriam seres interplanetários.
+            </p>
         </main>
 
-        <footer class="container">
+        <aside>
+            <h2>Artigos relacionados</h2>
+
+            <section class="gallery">
+                <figure class="item" style="--delay: .4s">
+                    <img src="https://source.unsplash.com/random?cat=2" alt="Imagem de um gato">
+                    <figcaption class="details">
+                        <h3>Sábado preguiçoso</h3>
+                        <div class="description">
+                            <span>Descubra atividades interessantes para fazer com seu pet durante os finais de semana.</span>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <figure class="item" style="--delay: .6s">
+                    <img src="https://source.unsplash.com/random?cat=3" alt="Imagem de um gato">
+                    <figcaption class="details">
+                        <h3>Balaio de gatos</h3>
+                        <div class="description">
+                            <span>Como evitar confusões entre seus gatíneos e acostumá-los desde filhotes.</span>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <figure class="item" style="--delay: .8s">
+                    <img src="https://source.unsplash.com/random?cat=4" alt="Imagem de um gato">
+                    <figcaption class="details">
+                        <h3>Cartela de cores</h3>
+                        <div class="description">
+                            <span>Seu gato é inverno intenso? Verão profundo? Descubra as cores que mais combinam com seu bichano.</span>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <figure class="item" style="--delay: 1s">
+                    <img src="https://source.unsplash.com/random?cat=5" alt="Imagem de um gato">
+                    <figcaption class="details">
+                        <h3>Os gatos sentem frio?</h3>
+                        <div class="description">
+                            <span>Preparem-se para a frente fria que vem para o país da melhor maneira possível.</span>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <figure class="item" style="--delay: 1.2s">
+                    <img src="https://source.unsplash.com/random?cat=6" alt="Imagem de um gato">
+                    <figcaption class="details">
+                        <h3>Conheça o Moacir</h3>
+                        <div class="description">
+                            <span>Moacir é o gatinho da semana do nosso blog. Venha conhecer sua história de superação.</span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </section>
+        </aside>
+
+        <footer>
             <h3>© 2023 - Rocketseat Explorer</h3>
         </footer>
-    </div>
+    </div>     
 </body>
 </html>

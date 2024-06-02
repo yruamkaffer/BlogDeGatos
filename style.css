@@ -18,89 +18,51 @@
     --color-base-gray-500: hsl(0, 0%, 24%);
 }
 
-html, body, input {
-    font-family: "Mulish", sans-serif;
-}
-
-body {
-    font-size: 1.6rem;
-    background-color: var(--color-base-darkblue);
+html, input {
+    font: 400 1.6rem/160% "Mulish", sans-serif;
     color: var(--color-base-gray-900);
 }
 
-#app {
-    display: grid;
-    grid-template-rows: max-content 1fr max-content;
-    height: 100vh;
-}
-
-.container, .container02, .container03{
-    width: min(43rem, 100%);
-    margin: 0 auto;
-}
-
-.container02 h1, .container03 h1{
-    margin-top: 3rem;
+h1, h2, h3{
     font-size: 2.4rem;
-    padding: 0 2.2rem;
-    font-weight: 700;
+    color: var(--color-base-gray-900);
 }
 
-.container02 p {
-    margin-top: 3rem;
-    font-size: 1.6rem;
-    font-weight: 500;
-    padding: 0 2.2rem;
+h3 {
+    font-size: 1.8rem;
+    line-height: 100%;
+}
+
+.primary-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+p {
+    font-size: 1.4rem;
     line-height: 160%;
 }
 
-.reaction {
-    display: flex;
-    height: 4rem;
-    width: 4rem;
-    gap: 1.2rem;
-    margin-top: .8rem;
-    padding: 0 2.2rem;
-}
-
-.button {
-    color: var(--color-base-darkblue);
-}
-
-.button:hover{
-    filter: contrast(101%) saturate(200%);
-    transform: scale(1.1);
-}
-
-#article{
-    max-width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    transition: all 200ms ease-out;
-    display: inline-block;
-}
-
-main {
-    overflow-y: scroll;
-    background-color: var(--color-base-white);
-}
+/* HEADER */
 
 header {
-    padding: 1.5rem 2.8rem;
+    background-color: var(--color-base-darkblue);
+    padding: 1.2rem 2.8rem;
 }
 
-header, nav {
+header .container {
+    max-width: 37.4rem;
+    margin-inline: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2.6rem;
 }
 
 header form {
     flex: 1;
-}
-
-.input-wrapper {
-    height: 4rem;
 }
 
 .input-wrapper label {
@@ -131,12 +93,49 @@ header form {
     border-radius: 50%;
 }
 
-.logo {
+.logo { 
     width: 4rem;
     height: 4rem;
+    line-height: 0;
 }
 
-/* Galeria */
+/* MAIN */
+
+main, aside, main p {
+    max-width: 38.2rem;
+    margin-inline: auto;
+}
+
+main h1, main p, .buttons, aside h2{
+    padding-inline: 1.6rem;
+}
+
+main h1 {
+    margin-top: 3.2rem;
+}
+
+main p {
+    margin-top: 1.6rem;
+}
+
+main .buttons {
+    margin-top: 1rem;
+}
+
+button {
+    all: unset;
+    transition: all 300ms;
+}
+
+button:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* ASIDE */
+
+aside {
+    margin-top: 2rem;
+}
 
 .item {
     background-color: var(--color-base-white);
@@ -172,7 +171,7 @@ header form {
     position: relative;
 }
 
-.details h2 {
+h3 {
     font-size: 1.8rem;
 }
 
@@ -188,6 +187,13 @@ header form {
     font-size: 1.4rem;
 }
 
+/* FOOTER */
+
+footer {
+    background-color: var(--color-base-darkblue);
+    margin-top: 4rem;
+}
+
 footer h3{
     text-align: center;
     color: var(--color-base-white);
@@ -195,7 +201,7 @@ footer h3{
     font-size: 1.6rem;
 }
 
-/* Animações */
+/* ANIMATIONS */
 
 header {
     --startY: -100%;
@@ -214,7 +220,7 @@ footer {
     }
 }
 
-.item, #article{
+main, aside{
     --delay: .4s;
     animation: appear .4s var(--delay) backwards;
 }
@@ -230,51 +236,64 @@ footer {
     }
 }
 
-/* Desktop */
+/* DESKTOP */
 
-@media (min-width: 1000px) {
+@media (width > 80rem){
+    #app {
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
 
-    .container{
-        width: min(122rem);
+        gap: 4rem 3.2rem;
     }
 
-    .container02 {
-        width: min(80rem);
-        padding: 0;
+    img {
+        border-radius: 5px;
     }
 
-    sidebar {
-        width: min(38.5rem);
+    header .container,
+    main, aside, main p {
+        max-width: initial;
+        margin: initial;
+        padding: initial;
+    }
+
+    main h1, main p, .buttons, aside h2{
+        padding: initial;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    header .container {
+        max-width: 121.6rem;
+        margin-inline: auto;
+    }
+
+    header form {
+        flex: 1;
+    }
+
+    header form input{
+        width: 100%;
     }
 
     main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 4.4rem 5rem;
-        gap: 3.4rem;
-        overflow-x: hidden;
+        grid-area: main;
+        max-width: 80rem;
+        margin-left: auto;
     }
 
-    .title{
-        display: flex;
-        padding: 0;
-        gap: 36.5rem;
-        align-items: center;
-        margin-top: 3rem;
+    aside {
+        grid-area: aside;
+        max-width: 38.4rem;
     }
 
-    sidebar h1 {
-        margin: 0;
-        padding: 0;
+    footer {
+        grid-area: footer;
     }
-
-    .container02 h1 {
-        padding: 0;
-        margin: 0;
-    }
-
-    .container02 p, .reaction, .item {
-        padding: 0;
-    }
-
 }
+
